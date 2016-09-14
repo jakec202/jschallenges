@@ -30,8 +30,7 @@ $(function(){
 
 		   // part 4
 		   $(".post:last").remove();
-		   $(".post:last").remove();
-		   $(".post:last").remove();
+		   $(".post").eq(4).remove();
 
 
 
