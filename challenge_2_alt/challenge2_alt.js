@@ -29,7 +29,75 @@
  */
 
  $(function(){
+ 		var shot1 = 0;
+        var shot2 = 0;
+        var goal1 = 0;
+        var goal2 = 0;
+        var resGame = 0;
+
+ 	 $("#teamone-shoot").click(function() {
+
+ 	 	jumbler = Math.floor((Math.random() * 8) + 1);
+
+ 	 	if (jumbler == 6) {
+ 	 		goal1++
+ 	 		$("#teamone-numhits").html(goal1);
+ 	 		shot1++;
+ 	 	$("#teamone-numshots").html(shot1);	
+ 	 	$("html").css("background-color", "orange");
+                 
+
+      }else{
+            shot1++;
+            $("#teamone-numshots").html(shot1);
+	  }
+
+
+        });
+	 
+
+
+		 $("#teamtwo-shoot").click(function() {
+
+		 	 	jumbler = Math.floor((Math.random() * 8) + 1);
+
+		 	 	if (jumbler == 6) {
+		 	 		goal2++
+		 	 		$("#teamtwo-numhits").html(goal2);
+		 	 		shot2++;
+		 	 	$("#teamtwo-numshots").html(shot2);	
+		 	 	$("html").css("background-color", "red");
+		                 
+
+		      }else{
+		            shot2++;
+		            $("#teamtwo-numshots").html(shot2);
+			  }
+
+
+		        });
+
+		 	$("#reset").click(function() {
+		 			
+		 			shot1 = 0;
+        			shot2 = 0;
+        			goal1 = 0;
+        			goal2 = 0;
+        			
+
+		 			resGame++;
+		            $("#num-resets").html(resGame);
+		            $("#teamone-numhits").html(goal1);
+		            $("#teamone-numshots").html(shot1);
+		            $("#teamtwo-numshots").html(shot2);	
+		            $("#teamtwo-numhits").html(shot2);	
+		            $("html").css("background-color", "white");
+
+		        });    
 
 
 
- })
+
+ 	 })
+
+ 
